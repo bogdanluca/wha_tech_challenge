@@ -74,3 +74,6 @@ E:\work\wha_tech_challenge\WhaTechChallenge\WhaTechChallenge\bin\WebActivatorEx.
 E:\work\wha_tech_challenge\WhaTechChallenge\WhaTechChallenge\bin\Ninject.xml
 E:\work\wha_tech_challenge\WhaTechChallenge\WhaTechChallenge\bin\Ninject.Web.Common.xml
 E:\work\wha_tech_challenge\WhaTechChallenge\WhaTechChallenge\bin\Ninject.Web.Mvc.xml
+E:\work\wha_tech_challenge\WhaTechChallenge\WhaTechChallenge\bin\CsvHelper.dll
+E:\work\wha_tech_challenge\WhaTechChallenge\WhaTechChallenge\bin\CsvHelper.pdb
+E:\work\wha_tech_challenge\WhaTechChallenge\WhaTechChallenge\bin\CsvHelper.xml

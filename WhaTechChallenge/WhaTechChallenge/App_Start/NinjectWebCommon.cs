@@ -1,3 +1,4 @@
+using WhaTechChallenge.Repositories;
 using WhaTechChallenge.Services;
 
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(WhaTechChallenge.App_Start.NinjectWebCommon), "Start")]
@@ -64,6 +65,7 @@ namespace WhaTechChallenge.App_Start
         private static void RegisterServices(IKernel kernel)
         {
             kernel.Bind<IMyService>().To<MyService>();
+            kernel.Bind<IBetHistoryRepository>().To<BetHistoryRepository>();
         }
     }
 }
