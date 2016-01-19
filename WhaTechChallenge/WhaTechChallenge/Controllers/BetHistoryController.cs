@@ -6,21 +6,21 @@ namespace WhaTechChallenge.Controllers
 {
     public class BetHistoryController : Controller
     {
-        private readonly IBetHistoryRepository betHistoryRepository;
+        private readonly IBetHistoryService betHistoryService;
 
-        public BetHistoryController(IBetHistoryRepository betHistoryRepository)
+        public BetHistoryController(IBetHistoryService betHistoryService)
         {
-            this.betHistoryRepository = betHistoryRepository;
+            this.betHistoryService = betHistoryService;
         }
 
         public ActionResult Settled()
         {
-            return View(betHistoryRepository.GetSettledBetHistory());
+            return View(betHistoryService.GetSettledBetHistory());
         }
 
         public ActionResult Unsettled()
         {
-            return View(betHistoryRepository.GetUnsettledBetHistory());
+            return View(betHistoryService.GetUnsettledBetHistory());
         }
 
     }

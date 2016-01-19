@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace WhaTechChallenge.Models
@@ -23,13 +24,18 @@ namespace WhaTechChallenge.Models
         {
             get
             {
-                return Bets.Any() && GetWinRate() > UnusualWinRateThreshold;
+                return Bets.Any() && WinRate > UnusualWinRateThreshold;
             }
         }
 
-        private decimal GetWinRate()
+        private decimal WinRate
         {
-            return Bets.Count(bi => bi.Win > 0)/(decimal) Bets.Count;
+            get { return Bets.Count(bi => bi.Win > 0)/(decimal) Bets.Count; }
+        }
+
+        public string WinRateAsString
+        {
+            get { return string.Format("{0}%", Math.Round(WinRate * 100, MidpointRounding.AwayFromZero)); }
         }
     }
 }

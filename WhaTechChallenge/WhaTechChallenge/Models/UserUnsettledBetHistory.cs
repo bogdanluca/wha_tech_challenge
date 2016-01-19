@@ -5,12 +5,12 @@ namespace WhaTechChallenge.Models
 {
     public class UserUnsettledBetHistory
     {
-        public UserUnsettledBetHistory(IEnumerable<UnsettledBetHistoryItem> bets)
+        public UserUnsettledBetHistory(IList<UnsettledBetHistoryItem> bets)
         {
             Bets = bets ?? new List<UnsettledBetHistoryItem>();
         }
 
-        public IEnumerable<UnsettledBetHistoryItem> Bets { get; private set; }
+        public IList<UnsettledBetHistoryItem> Bets { get; private set; }
 
         public int UserID
         {

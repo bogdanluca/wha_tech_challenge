@@ -1,49 +1,58 @@
-﻿@model IEnumerable<WhaTechChallenge.Models.SettledBetHistoryItem>
+﻿@model IEnumerable<WhaTechChallenge.Models.UserSettledBetHistory>
 
 @{
-    ViewBag.Title = "BetHistory";
+    ViewBag.Title = "Settled Bet History";
 }
 
-<h2>BetHistory</h2>
+<h2>@ViewBag.Title</h2>
 
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.CustomerID)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.EventID)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ParticipantID)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Stake)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Win)
-        </th>
-        <th></th>
-    </tr>
+<table class="table table-condensed" style="border-collapse:collapse;">
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.CustomerID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.EventID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ParticipantID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Stake)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Win)
-        </td>
-    </tr>
-}
+    <thead>
+        <tr>
+            <th>&nbsp;</th>
+            <th>User ID</th>
+            <th>Win Rate</th>
+        </tr>
+    </thead>
 
+    <tbody>
+    @foreach (var userBetHistory in Model)
+    {
+        <tr data-toggle="collapse" data-target="#@userBetHistory.UserID" class="accordion-toggle"  style="@(userBetHistory.HasUnusualWinningRate ? "background-color: red;" :"")">
+            <td><button class="btn btn-default btn-xs"><span class="glyphicon glyphicon-eye-open"></span></button></td>
+            <td>@userBetHistory.UserID</td>
+            <td>@userBetHistory.WinRateAsString @if(userBetHistory.HasUnusualWinningRate) {<span> (unusual)</span>}</td>
+        </tr>
+        <tr>
+            <td colspan="12" class="hiddenRow">
+                <div class="accordian-body collapse" id="@userBetHistory.UserID">
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th>Event ID</th>
+                            <th>Participant ID</th>
+                            <th>Stake</th>
+                            <th>Win</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        @foreach (var betHistoryItem in userBetHistory.Bets)
+                        {
+                            <tr>
+                                <td>@betHistoryItem.EventID</td>
+                                <td>@betHistoryItem.ParticipantID</td>
+                                <td>@betHistoryItem.Stake</td>
+                                <td>@betHistoryItem.Win</td>
+                            </tr>
+                        }
+                        </tbody>
+                    </table>
+
+                </div>
+            </td>
+        </tr>
+    }
+    </tbody>
 </table>
+    
