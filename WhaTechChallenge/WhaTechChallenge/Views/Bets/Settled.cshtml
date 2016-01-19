@@ -22,7 +22,7 @@
         <tr data-toggle="collapse" data-target="#@userBetHistory.UserID" class="accordion-toggle"  style="@(userBetHistory.HasUnusualWinningRate ? "background-color: lightsalmon;" :"")">
             <td><button class="btn btn-default btn-xs"><span class="glyphicon glyphicon-eye-open"></span></button></td>
             <td>@userBetHistory.UserID</td>
-            <td>@userBetHistory.WinRateAsString @if(userBetHistory.HasUnusualWinningRate) {<span> (unusual)</span>}</td>
+            <td>@userBetHistory.WinRateAsString</td>
         </tr>
         <tr>
             <td colspan="12" class="hiddenRow">

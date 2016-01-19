@@ -90,6 +90,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\UnsettledBetItemSpecs.cs" />
     <Compile Include="Models\UserSettledBetHistorySpecs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\BetServiceSpecs.cs" />

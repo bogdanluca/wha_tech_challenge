@@ -35,7 +35,15 @@ namespace WhaTechChallenge.Models
 
         public string WinRateAsString
         {
-            get { return string.Format("{0}%", Math.Round(WinRate * 100, MidpointRounding.AwayFromZero)); }
+            get
+            {
+                var winRateAsString = string.Format("{0}%", Math.Round(WinRate * 100, MidpointRounding.AwayFromZero));
+
+                if (HasUnusualWinningRate)
+                    winRateAsString = string.Format("{0} (unusual)", winRateAsString);
+
+                return winRateAsString;
+            }
         }
 
         public decimal AverageBet
