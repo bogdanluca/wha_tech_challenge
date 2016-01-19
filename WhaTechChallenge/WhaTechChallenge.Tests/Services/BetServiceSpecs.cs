@@ -9,19 +9,19 @@ using WhaTechChallenge.Services;
 namespace WhaTechChallenge.Tests.Services
 {
     [TestFixture]
-    public class BetHistoryServiceSpecs
+    public class BetServiceSpecs
     {
         [SetUp]
         public void Setup()
         {
-            repository = A.Fake<IBetHistoryRepository>();
+            repository = A.Fake<IBetRepository>();
         }
 
-        private IBetHistoryRepository repository;
+        private IBetRepository repository;
 
-        private BetHistoryService CreateSUT()
+        private BetService CreateSUT()
         {
-            return new BetHistoryService(repository);
+            return new BetService(repository);
         }
 
         private IEnumerable<SettledBetHistoryItem> CreateSettledBetHistory()

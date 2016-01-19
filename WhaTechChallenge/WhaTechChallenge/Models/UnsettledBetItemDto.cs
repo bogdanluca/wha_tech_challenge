@@ -1,6 +1,6 @@
 ﻿namespace WhaTechChallenge.Models
 {
-    public class UnsettledBetHistoryItem
+    public class UnsettledBetItemDto
     {
         public int CustomerID { get; set; }
         public int EventID { get; set; }

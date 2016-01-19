@@ -9,8 +9,8 @@ namespace WhaTechChallenge
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            routes.MapRoute("BetHistory", "BetHistory/{action}", new {controller = "BetHistory", action = "{action}"});
-            routes.MapRoute("Default", "", new {controller = "BetHistory", action = "Settled"});
+            routes.MapRoute("Bets", "Bets/{action}", new {controller = "Bets", action = "{action}"});
+            routes.MapRoute("Default", "", new {controller = "Bets", action = "Settled"});
         }
     }
 }

@@ -6,7 +6,7 @@ using WhaTechChallenge.Models;
 
 namespace WhaTechChallenge.Repositories
 {
-    class BetHistoryRepository : IBetHistoryRepository
+    class BetRepository : IBetRepository
     {
         const string SettledBetsFileName = "Settled.csv";
         const string UnsettledBetsFileName = "Unsettled.csv";
@@ -20,12 +20,12 @@ namespace WhaTechChallenge.Repositories
             }
         }
 
-        public IEnumerable<UnsettledBetHistoryItem> GetUnsettledBetHistory()
+        public IEnumerable<UnsettledBetItemDto> GetUnsettledBets()
         {
             using (var fileReader = File.OpenText(GetFilePath(UnsettledBetsFileName)))
             using (var csvReader = new CsvHelper.CsvReader(fileReader))
             {
-                return csvReader.GetRecords<UnsettledBetHistoryItem>().ToList();
+                return csvReader.GetRecords<UnsettledBetItemDto>().ToList();
             }
         }
 

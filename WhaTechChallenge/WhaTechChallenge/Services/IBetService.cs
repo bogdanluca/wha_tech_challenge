@@ -3,9 +3,9 @@ using WhaTechChallenge.Models;
 
 namespace WhaTechChallenge.Services
 {
-    public interface IBetHistoryService
+    public interface IBetService
     {
         IEnumerable<UserSettledBetHistory> GetSettledBetHistory();
-        IEnumerable<UserUnsettledBetHistory> GetUnsettledBetHistory();
+        IEnumerable<UnsettledBetItem> GetUnsettledBets();
     }
 }

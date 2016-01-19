@@ -37,5 +37,10 @@ namespace WhaTechChallenge.Models
         {
             get { return string.Format("{0}%", Math.Round(WinRate * 100, MidpointRounding.AwayFromZero)); }
         }
+
+        public decimal AverageBet
+        {
+            get { return Bets.Average(b => b.Stake); }
+        }
     }
 }

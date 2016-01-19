@@ -5,11 +5,11 @@ using WhaTechChallenge.Repositories;
 
 namespace WhaTechChallenge.Services
 {
-    public class BetHistoryService : IBetHistoryService
+    public class BetService : IBetService
     {
-        private readonly IBetHistoryRepository repository;
+        private readonly IBetRepository repository;
 
-        public BetHistoryService(IBetHistoryRepository repository)
+        public BetService(IBetRepository repository)
         {
             this.repository = repository;
         }
@@ -22,12 +22,13 @@ namespace WhaTechChallenge.Services
                     .Select(g => new UserSettledBetHistory(g.ToList()));
         }
 
-        public IEnumerable<UserUnsettledBetHistory> GetUnsettledBetHistory()
+        public IEnumerable<UnsettledBetItem> GetUnsettledBets()
         {
-            return
-                repository.GetUnsettledBetHistory()
-                    .GroupBy(bhi => bhi.CustomerID).OrderBy(g =>g.Key)
-                    .Select(g => new UserUnsettledBetHistory(g.ToList()));
+            var betHistory = GetSettledBetHistory();
+
+            return repository.GetUnsettledBets()
+                .Select(item =>
+                    new UnsettledBetItem(item, betHistory.FirstOrDefault(bh => bh.UserID == item.CustomerID)));
         }
     }
 }

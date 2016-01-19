@@ -1,0 +1,33 @@
+﻿@model IEnumerable<WhaTechChallenge.Models.UnsettledBetItem>
+
+@{
+    ViewBag.Title = "Unsettled Bets";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<table class="table">
+
+    <thead>
+        <tr>
+            <th>User ID</th>
+            <th>Event ID</th>
+            <th>Participant ID</th>
+            <th>Stake</th>
+            <th>Potential Win</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var unsettledBetItem in Model)
+        {
+            <tr >
+                <td>@unsettledBetItem.UserID</td>
+                <td>@unsettledBetItem.EventID</td>
+                <td>@unsettledBetItem.ParticipantID</td>
+                <td>@unsettledBetItem.Stake</td>
+                <td>@unsettledBetItem.PotentialWin</td>
+            </tr>
+        }
+    </tbody>
+</table>

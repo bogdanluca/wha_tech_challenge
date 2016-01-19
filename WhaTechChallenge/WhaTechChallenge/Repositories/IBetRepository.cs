@@ -3,9 +3,9 @@ using WhaTechChallenge.Models;
 
 namespace WhaTechChallenge.Repositories
 {
-    public interface IBetHistoryRepository
+    public interface IBetRepository
     {
         IEnumerable<SettledBetHistoryItem> GetSettledBetHistory();
-        IEnumerable<UnsettledBetHistoryItem> GetUnsettledBetHistory();
+        IEnumerable<UnsettledBetItemDto> GetUnsettledBets();
     }
 }
