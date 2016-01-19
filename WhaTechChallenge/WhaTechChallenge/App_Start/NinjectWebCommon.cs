@@ -1,3 +1,4 @@
+using WhaTechChallenge.Mapper;
 using WhaTechChallenge.Repositories;
 using WhaTechChallenge.Services;
 
@@ -66,6 +67,7 @@ namespace WhaTechChallenge.App_Start
         {
             kernel.Bind<IBetService>().To<BetService>();
             kernel.Bind<IBetRepository>().To<BetRepository>();
+            kernel.Bind<IMapper>().To<Mapper.Mapper>();
         }
     }
 }

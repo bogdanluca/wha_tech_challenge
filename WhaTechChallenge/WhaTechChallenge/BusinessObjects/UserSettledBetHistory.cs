@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
 namespace WhaTechChallenge.BusinessObjects
@@ -13,7 +12,7 @@ namespace WhaTechChallenge.BusinessObjects
             Bets = bets ?? new List<SettledBetHistoryItem>();
         }
 
-        public IList<SettledBetHistoryItem> Bets { get; private set; }
+        public IList<SettledBetHistoryItem> Bets { get; }
 
         public int UserID
         {
@@ -22,28 +21,12 @@ namespace WhaTechChallenge.BusinessObjects
 
         public bool HasUnusualWinningRate
         {
-            get
-            {
-                return Bets.Any() && WinRate > UnusualWinRateThreshold;
-            }
+            get { return Bets.Any() && WinRate > UnusualWinRateThreshold; }
         }
 
-        private decimal WinRate
+        public decimal WinRate
         {
             get { return Bets.Count(bi => bi.Win > 0)/(decimal) Bets.Count; }
-        }
-
-        public string WinRateAsString
-        {
-            get
-            {
-                var winRateAsString = string.Format("{0}%", Math.Round(WinRate * 100, MidpointRounding.AwayFromZero));
-
-                if (HasUnusualWinningRate)
-                    winRateAsString = string.Format("{0} (unusual)", winRateAsString);
-
-                return winRateAsString;
-            }
         }
 
         public decimal AverageBet

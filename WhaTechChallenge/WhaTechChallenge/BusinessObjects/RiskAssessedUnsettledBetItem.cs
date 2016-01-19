@@ -1,4 +1,5 @@
 using System;
+using WhaTechChallenge.Common;
 
 namespace WhaTechChallenge.BusinessObjects
 {

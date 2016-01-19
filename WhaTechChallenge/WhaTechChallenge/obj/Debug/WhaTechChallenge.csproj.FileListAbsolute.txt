@@ -155,3 +155,5 @@ C:\work\wha_tech_challenge\WhaTechChallenge\WhaTechChallenge\bin\Microsoft.Owin.
 C:\work\wha_tech_challenge\WhaTechChallenge\WhaTechChallenge\obj\Debug\WhaTechChallenge.dll
 C:\work\wha_tech_challenge\WhaTechChallenge\WhaTechChallenge\obj\Debug\WhaTechChallenge.pdb
 E:\work\wha_tech_challenge\WhaTechChallenge\WhaTechChallenge\obj\Debug\WhaTechChallenge.csprojResolveAssemblyReference.cache
+E:\work\wha_tech_challenge\WhaTechChallenge\WhaTechChallenge\bin\AutoMapper.dll
+E:\work\wha_tech_challenge\WhaTechChallenge\WhaTechChallenge\bin\AutoMapper.xml

@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using NUnit.Framework;
 using WhaTechChallenge.BusinessObjects;
+using WhaTechChallenge.Common;
 
 namespace WhaTechChallenge.Tests.BusinessObjects
 {

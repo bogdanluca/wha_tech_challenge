@@ -1,4 +1,4 @@
-﻿namespace WhaTechChallenge.BusinessObjects
+﻿namespace WhaTechChallenge.Common
 {
     public enum UnsettledBetRiskType
     {
