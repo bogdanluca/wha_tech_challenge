@@ -54,10 +54,21 @@ namespace WhaTechChallenge.Tests.Models
         }
 
         [Test]
+        public void Should_be_risky_if_user_has_bet_history_with_unusual_winning_rate()
+        {
+            var unsettledBetItem = new UnsettledBetItem(new UnsettledBetItemDto(),
+                CreateUserBetHistoryWithUnusualWinningRate());
+
+            var actual = unsettledBetItem.RiskType;
+
+            Assert.That(actual, Is.EqualTo(UnsettledBetRiskType.Risky));
+        }
+
+        [Test]
         public void Should_be_highly_unusual_if_the_stake_is_more_than_30_times_higher_than_the_average_bet()
         {
             var unsettledBetItem = new UnsettledBetItem(new UnsettledBetItemDto { PotentialWin = 2000, Stake = 1100 },
-                CreateUserBetHistoryWithUnusualWinningRate());
+                CreateUserBetHistoryWithNormalWinningRate());
 
             var actual = unsettledBetItem.RiskType;
 
@@ -68,22 +79,11 @@ namespace WhaTechChallenge.Tests.Models
         public void Should_be_unusual_if_the_stake_is_more_than_10_times_higher_than_the_average_bet()
         {
             var unsettledBetItem = new UnsettledBetItem(new UnsettledBetItemDto { PotentialWin = 800, Stake = 400 },
-                CreateUserBetHistoryWithUnusualWinningRate());
+                CreateUserBetHistoryWithNormalWinningRate());
 
             var actual = unsettledBetItem.RiskType;
 
             Assert.That(actual, Is.EqualTo(UnsettledBetRiskType.Unusual));
-        }
-
-        [Test]
-        public void Should_be_risky_if_user_has_bet_history_with_unusual_winning_rate()
-        {
-            var unsettledBetItem = new UnsettledBetItem(new UnsettledBetItemDto(),
-                CreateUserBetHistoryWithUnusualWinningRate());
-
-            var actual = unsettledBetItem.RiskType;
-
-            Assert.That(actual, Is.EqualTo(UnsettledBetRiskType.Risky));
         }
 
         [Test]

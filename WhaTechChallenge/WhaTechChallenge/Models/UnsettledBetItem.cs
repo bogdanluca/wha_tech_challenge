@@ -1,3 +1,6 @@
+using System;
+using System.Runtime.InteropServices.ComTypes;
+
 namespace WhaTechChallenge.Models
 {
     public class UnsettledBetItem
@@ -17,6 +20,16 @@ namespace WhaTechChallenge.Models
         public decimal Stake { get { return item.Stake; } }
         public int PotentialWin { get { return item.PotentialWin; } }
 
+        public decimal AverageBet
+        {
+            get
+            {
+                return userBetHistory != null
+                    ? Math.Round(userBetHistory.AverageBet, MidpointRounding.AwayFromZero)
+                    : 0;
+            }
+        }
+
         public UnsettledBetRiskType RiskType
         {
             get
@@ -24,22 +37,20 @@ namespace WhaTechChallenge.Models
                 if (userBetHistory == null)
                     return UnsettledBetRiskType.NoRisk;
 
+                if (userBetHistory.HasUnusualWinningRate)
+                    return UnsettledBetRiskType.Risky;
+
                 if (IsHighlyUnusual())
                     return UnsettledBetRiskType.HighlyUnusual;
 
                 if (IsUnusual())
                     return UnsettledBetRiskType.Unusual;
 
-                if (IsRisky())
+                if(PotentialWin >= 1000)
                     return UnsettledBetRiskType.Risky;
 
                 return UnsettledBetRiskType.NoRisk;
             }
-        }
-
-        private bool IsRisky()
-        {
-            return PotentialWin >= 1000 || userBetHistory.HasUnusualWinningRate;
         }
 
         private bool IsHighlyUnusual()

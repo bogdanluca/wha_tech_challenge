@@ -9,24 +9,28 @@
 <table class="table">
 
     <thead>
-        <tr>
-            <th>User ID</th>
-            <th>Event ID</th>
-            <th>Participant ID</th>
-            <th>Stake</th>
-            <th>Potential Win</th>
-        </tr>
+    <tr>
+        <th>Risk type</th>
+        <th>User ID</th>
+        <th>Event ID</th>
+        <th>Participant ID</th>
+        <th>Stake</th>
+        <th>Potential Win</th>
+        <th>User Avg Bet</th>
+    </tr>
     </thead>
 
     <tbody>
         @foreach (var unsettledBetItem in Model)
         {
-            <tr >
+            <tr class="@unsettledBetItem.RiskType">
+                <td>@unsettledBetItem.RiskType</td>
                 <td>@unsettledBetItem.UserID</td>
                 <td>@unsettledBetItem.EventID</td>
                 <td>@unsettledBetItem.ParticipantID</td>
                 <td>@unsettledBetItem.Stake</td>
                 <td>@unsettledBetItem.PotentialWin</td>
+                <td>@unsettledBetItem.AverageBet</td>
             </tr>
         }
     </tbody>
