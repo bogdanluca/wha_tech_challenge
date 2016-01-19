@@ -23,6 +23,7 @@ namespace WhaTechChallenge.Controllers
             var settledBetHistoryModel =
                 mapper.Map<IEnumerable<UserSettledBetHistory>, IEnumerable<UserSettledBetHistoryModel>>(
                     betService.GetSettledBetHistory());
+
             return View(settledBetHistoryModel);
         }
 
@@ -31,8 +32,8 @@ namespace WhaTechChallenge.Controllers
             var unsettledBetItemsModel =
                 mapper.Map<IEnumerable<RiskAssessedUnsettledBetItem>, IEnumerable<UnsettledBetItemModel>>(
                     betService.GetUnsettledBets());
+
             return View(unsettledBetItemsModel);
         }
-
     }
 }
