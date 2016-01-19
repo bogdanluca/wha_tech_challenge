@@ -1,4 +1,7 @@
+
+#Ignore files build by Visual Studio
 WhaTechChallenge/WhaTechChallenge/bin/
 WhaTechChallenge/.vs/
 WhaTechChallenge/packages/
 WhaTechChallenge/WhaTechChallenge.Tests/obj/
+WhaTechChallenge/WhaTechChallenge/obj/
