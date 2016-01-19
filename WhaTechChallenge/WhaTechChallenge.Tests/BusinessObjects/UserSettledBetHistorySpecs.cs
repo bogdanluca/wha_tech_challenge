@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using NUnit.Framework;
-using WhaTechChallenge.Models;
+using WhaTechChallenge.BusinessObjects;
 
-namespace WhaTechChallenge.Tests.Models
+namespace WhaTechChallenge.Tests.BusinessObjects
 {
     [TestFixture]
     public class UserSettledBetHistorySpecs

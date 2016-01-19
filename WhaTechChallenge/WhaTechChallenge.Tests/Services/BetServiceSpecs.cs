@@ -2,7 +2,7 @@
 using System.Linq;
 using FakeItEasy;
 using NUnit.Framework;
-using WhaTechChallenge.Models;
+using WhaTechChallenge.BusinessObjects;
 using WhaTechChallenge.Repositories;
 using WhaTechChallenge.Services;
 

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using WhaTechChallenge.Models;
+using WhaTechChallenge.BusinessObjects;
 using WhaTechChallenge.Repositories;
 
 namespace WhaTechChallenge.Services
@@ -22,13 +22,13 @@ namespace WhaTechChallenge.Services
                     .Select(g => new UserSettledBetHistory(g.ToList()));
         }
 
-        public IEnumerable<UnsettledBetItem> GetUnsettledBets()
+        public IEnumerable<RiskAssessedUnsettledBetItem> GetUnsettledBets()
         {
             var betHistory = GetSettledBetHistory();
 
             return repository.GetUnsettledBets()
                 .Select(item =>
-                    new UnsettledBetItem(item, betHistory.FirstOrDefault(bh => bh.UserID == item.CustomerID)));
+                    new RiskAssessedUnsettledBetItem(item, betHistory.FirstOrDefault(bh => bh.UserID == item.CustomerID)));
         }
     }
 }

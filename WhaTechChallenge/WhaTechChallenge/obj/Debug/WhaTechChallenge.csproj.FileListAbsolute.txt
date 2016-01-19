@@ -154,3 +154,4 @@ C:\work\wha_tech_challenge\WhaTechChallenge\WhaTechChallenge\bin\Microsoft.Owin.
 C:\work\wha_tech_challenge\WhaTechChallenge\WhaTechChallenge\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\work\wha_tech_challenge\WhaTechChallenge\WhaTechChallenge\obj\Debug\WhaTechChallenge.dll
 C:\work\wha_tech_challenge\WhaTechChallenge\WhaTechChallenge\obj\Debug\WhaTechChallenge.pdb
+E:\work\wha_tech_challenge\WhaTechChallenge\WhaTechChallenge\obj\Debug\WhaTechChallenge.csprojResolveAssemblyReference.cache

@@ -1,5 +1,4 @@
 ﻿using System.Web.Mvc;
-using WhaTechChallenge.Repositories;
 using WhaTechChallenge.Services;
 
 namespace WhaTechChallenge.Controllers

@@ -190,11 +190,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\UnsettledBetItem.cs" />
-    <Compile Include="Models\UnsettledBetItemDto.cs" />
-    <Compile Include="Models\SettledBetHistoryItem.cs" />
-    <Compile Include="Models\UnsettledBetRiskType.cs" />
-    <Compile Include="Models\UserSettledBetHistory.cs" />
+    <Compile Include="BusinessObjects\RiskAssessedUnsettledBetItem.cs" />
+    <Compile Include="BusinessObjects\UnsettledBetItem.cs" />
+    <Compile Include="BusinessObjects\SettledBetHistoryItem.cs" />
+    <Compile Include="BusinessObjects\UnsettledBetRiskType.cs" />
+    <Compile Include="BusinessObjects\UserSettledBetHistory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\BetRepository.cs" />
     <Compile Include="Repositories\IBetRepository.cs" />

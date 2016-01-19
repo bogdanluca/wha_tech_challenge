@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace WhaTechChallenge.Models
+namespace WhaTechChallenge.BusinessObjects
 {
     public class UserSettledBetHistory
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using WhaTechChallenge.Models;
+using WhaTechChallenge.BusinessObjects;
 
 namespace WhaTechChallenge.Repositories
 {
@@ -20,12 +20,12 @@ namespace WhaTechChallenge.Repositories
             }
         }
 
-        public IEnumerable<UnsettledBetItemDto> GetUnsettledBets()
+        public IEnumerable<UnsettledBetItem> GetUnsettledBets()
         {
             using (var fileReader = File.OpenText(GetFilePath(UnsettledBetsFileName)))
             using (var csvReader = new CsvHelper.CsvReader(fileReader))
             {
-                return csvReader.GetRecords<UnsettledBetItemDto>().ToList();
+                return csvReader.GetRecords<UnsettledBetItem>().ToList();
             }
         }
 

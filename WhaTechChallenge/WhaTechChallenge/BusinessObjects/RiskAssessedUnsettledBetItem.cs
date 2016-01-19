@@ -1,14 +1,13 @@
 using System;
-using System.Runtime.InteropServices.ComTypes;
 
-namespace WhaTechChallenge.Models
+namespace WhaTechChallenge.BusinessObjects
 {
-    public class UnsettledBetItem
+    public class RiskAssessedUnsettledBetItem
     {
-        private readonly UnsettledBetItemDto item;
+        private readonly UnsettledBetItem item;
         private readonly UserSettledBetHistory userBetHistory;
 
-        public UnsettledBetItem(UnsettledBetItemDto item, UserSettledBetHistory userBetHistory)
+        public RiskAssessedUnsettledBetItem(UnsettledBetItem item, UserSettledBetHistory userBetHistory)
         {
             this.item = item;
             this.userBetHistory = userBetHistory;

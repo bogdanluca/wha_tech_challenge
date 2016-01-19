@@ -1,4 +1,4 @@
-﻿namespace WhaTechChallenge.Models
+﻿namespace WhaTechChallenge.BusinessObjects
 {
     public class SettledBetHistoryItem
     {

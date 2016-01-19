@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
-using WhaTechChallenge.Models;
+using WhaTechChallenge.BusinessObjects;
 
 namespace WhaTechChallenge.Services
 {
     public interface IBetService
     {
         IEnumerable<UserSettledBetHistory> GetSettledBetHistory();
-        IEnumerable<UnsettledBetItem> GetUnsettledBets();
+        IEnumerable<RiskAssessedUnsettledBetItem> GetUnsettledBets();
     }
 }
