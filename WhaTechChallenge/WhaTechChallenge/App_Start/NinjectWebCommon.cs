@@ -64,7 +64,7 @@ namespace WhaTechChallenge.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
-            kernel.Bind<IMyService>().To<MyService>();
+            kernel.Bind<IBetHistoryService>().To<BetHistoryService>();
             kernel.Bind<IBetHistoryRepository>().To<BetHistoryRepository>();
         }
     }

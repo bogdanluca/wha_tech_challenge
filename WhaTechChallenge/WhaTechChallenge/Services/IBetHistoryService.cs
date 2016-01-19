@@ -5,7 +5,7 @@ using System.Web;
 
 namespace WhaTechChallenge.Services
 {
-    public interface IMyService
+    public interface IBetHistoryService
     {
     }
 }

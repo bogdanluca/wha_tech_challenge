@@ -200,11 +200,13 @@
     <Compile Include="Models\SettledBetHistoryItem.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\UserSettledBetHistory.cs" />
+    <Compile Include="Models\UserUnsettledBetHistory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\BetHistoryRepository.cs" />
     <Compile Include="Repositories\IBetHistoryRepository.cs" />
-    <Compile Include="Services\IMyService.cs" />
-    <Compile Include="Services\MyService.cs" />
+    <Compile Include="Services\IBetHistoryService.cs" />
+    <Compile Include="Services\BetHistoryService.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>

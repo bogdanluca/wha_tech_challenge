@@ -5,13 +5,6 @@ namespace WhaTechChallenge.Controllers
 {
     public class HomeController : Controller
     {
-        private IMyService myService;
-
-        public HomeController(IMyService myService)
-        {
-            this.myService = myService;
-        }
-
         public ActionResult Index()
         {
             return View();

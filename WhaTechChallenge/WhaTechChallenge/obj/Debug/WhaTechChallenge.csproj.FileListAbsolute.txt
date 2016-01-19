@@ -64,7 +64,6 @@ E:\work\wha_tech_challenge\WhaTechChallenge\WhaTechChallenge\bin\Microsoft.Owin.
 E:\work\wha_tech_challenge\WhaTechChallenge\WhaTechChallenge\bin\Microsoft.Owin.Security.Google.xml
 E:\work\wha_tech_challenge\WhaTechChallenge\WhaTechChallenge\bin\Microsoft.Owin.Security.Twitter.xml
 E:\work\wha_tech_challenge\WhaTechChallenge\WhaTechChallenge\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-E:\work\wha_tech_challenge\WhaTechChallenge\WhaTechChallenge\obj\Debug\WhaTechChallenge.csprojResolveAssemblyReference.cache
 E:\work\wha_tech_challenge\WhaTechChallenge\WhaTechChallenge\obj\Debug\WhaTechChallenge.dll
 E:\work\wha_tech_challenge\WhaTechChallenge\WhaTechChallenge\obj\Debug\WhaTechChallenge.pdb
 E:\work\wha_tech_challenge\WhaTechChallenge\WhaTechChallenge\bin\Ninject.dll
